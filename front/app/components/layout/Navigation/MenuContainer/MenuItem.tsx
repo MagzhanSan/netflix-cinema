@@ -7,8 +7,7 @@ import { FC } from 'react';
 
 const MenuItem: FC<{ item: IMenuItem }> = ({ item: { icon, title, link } }) => {
   const { asPath } =
-    typeof window !== 'undefined' && require('next/router').useRouter();
-
+    typeof window !== 'undefined' && require('next/navigation').useRouter();
   return (
     <li
       className={cn({

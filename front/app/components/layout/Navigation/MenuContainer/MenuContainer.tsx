@@ -1,12 +1,14 @@
 import Menu from './Menu';
-import { firstMenu } from './menu.data';
+import GenreMenu from './genres/GenreMenu';
+import { firstMenu, userMenu } from './menu.data';
 import { FC } from 'react';
 
 const MenuContainer: FC = () => {
-  console.log(firstMenu);
   return (
     <div>
       <Menu menu={firstMenu} />
+      <GenreMenu />
+      <Menu menu={userMenu} />
     </div>
   );
 };
