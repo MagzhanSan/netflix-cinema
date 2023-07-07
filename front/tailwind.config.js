@@ -1,34 +1,32 @@
-const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
-
+/** @type {import('tailwindcss').Config} */
 const primary = '#E30813';
 
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    color: {
-      primary: primary,
-      black: colors.black,
-      white: colors.white,
-      transparent: colors.transparent,
-      yellow: {
-        700: '#F5C518',
-      },
-      gray: {
-        300: '#d9dae8',
-        500: '#999AA5',
-        600: '#66676E',
-        700: '#39393f',
-        800: '#242529',
-        900: '#191b1f',
-        950: '#101215',
-      },
-    },
     extend: {
+      colors: {
+        primary: primary,
+        yellow: {
+          700: '#F5C518',
+        },
+        gray: {
+          300: '#d9dae8',
+          500: '#999AA5',
+          600: '#66676E',
+          700: '#39393f',
+          800: '#242529',
+          900: '#191b1f',
+          950: '#101215',
+        },
+        grayDark: {
+          900: '#181b1e',
+        },
+      },
       spacing: {
         0.5: '0.125rem',
         layout: '2.75rem',
@@ -74,60 +72,12 @@ module.exports = {
         fade: 'fade 0.5s ease-in-out',
         scaleIn: 'scaleIn 0.35s ease-in-out',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
   },
-  plugins: [
-    plugin((addComponents, theme, addUtilities) => {
-      addComponents({
-        '.btn-primary': {
-          backgroundColor: primary,
-          color: '#fff',
-          borderRadius: '0.65rem',
-          transition: 'background-color 0.3s ease-in-out',
-          '&:hover': {
-            backgroundColor: '#ff0009',
-          },
-        },
-        '.text-link': {
-          textUnderLineOffset: 4,
-          color: 'rgba(255, 255, 255, 0.9)',
-          transition: 'text-decoration 0.3s ease-in-out',
-          textDecorationLine: 'underline',
-          textDecorationColor: 'rgba(255, 255, 255, 0.2)',
-          '&:hover': {
-            textDecorationColor: 'rgba(255, 255, 255, 0.9)',
-          },
-        },
-        '.air-block': {
-          borderRadius: theme('borderRadius.layout'),
-          backgroundColor: theme('color.gray.950'),
-          color: theme('color.white'),
-          boxShadow: theme('boxShadow.lg'),
-        },
-      });
-
-      addUtilities({
-        '.text-shadow': {
-          textShadow: '1px 1px rgba(0, 0, 0, 0.4)',
-        },
-
-        'outline-border-name': {
-          outline: 'none',
-          border: 'none',
-        },
-
-        '.flex-center-between': {
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        },
-
-        '.image-like-bg': {
-          objectPosition: 'center',
-          objectFit: 'cover',
-          pointerEvents: 'none',
-        },
-      });
-    }),
-  ],
+  plugins: [],
 };
