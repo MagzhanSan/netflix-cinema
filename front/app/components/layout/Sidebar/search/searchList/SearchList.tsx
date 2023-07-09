@@ -27,7 +27,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
           );
         })
       ) : (
-        <div className={styles.item}>No results</div>
+        <div className={styles.noData}>No results</div>
       )}
     </div>
   );
