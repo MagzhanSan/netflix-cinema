@@ -1,3 +1,4 @@
+import Layout from '@/components/layout/Layout';
 import { createContext, FC, ReactNode } from 'react';
 import { QueryClientProvider, QueryClient } from 'react-query';
 
@@ -26,7 +27,9 @@ const MainProvider: FC<IMainProvider> = ({ children }) => {
 
   return (
     <MainContext.Provider value={contextValue}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <Layout>{children}</Layout>
+      </QueryClientProvider>
     </MainContext.Provider>
   );
 };

@@ -1,12 +1,16 @@
 import { IHome } from './home.interface';
-import Layout from '@/components/layout/Layout';
+import Heading from '@/components/ui/heading/Heading';
+import Meta from '@/utils/meta/Meta';
 import { FC } from 'react';
 
 const Home: FC<IHome> = () => {
   return (
-    <div>
-      <Layout>Naruto</Layout>
-    </div>
+    <Meta title="Online cinema by Maga" description="Watch perfect movies :D">
+      <Heading
+        title="Watch movies online"
+        className="text-gray-300 mb-8 text-xl"
+      />
+    </Meta>
   );
 };
 

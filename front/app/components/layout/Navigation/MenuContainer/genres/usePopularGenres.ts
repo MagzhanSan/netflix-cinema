@@ -12,8 +12,6 @@ export const usePopularGenres = () => {
       title: genre.name,
     }));
 
-    console.log(menuItems);
-
     return menuItems.slice(0, 4);
   });
 
