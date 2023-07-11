@@ -1,6 +1,6 @@
+import { axiosClassic } from '@/assets/api/interceptors';
 import { getMoviesUrl } from '@/config/api.config';
 import { IMovie } from '@/shared/types/movies.types';
-import { axiosClassic } from 'api/interceptors';
 
 export const MovieSearchService = {
   async getAll(searchTerm?: string) {

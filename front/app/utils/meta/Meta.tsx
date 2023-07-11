@@ -9,8 +9,6 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
     typeof window !== 'undefined' && require('next/navigation').useRouter();
   const currentUrl = `http://localhost:3000${asPath}`;
 
-  console.log(description);
-
   return (
     <>
       <Head>

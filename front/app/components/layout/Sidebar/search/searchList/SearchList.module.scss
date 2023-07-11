@@ -3,7 +3,7 @@
     @apply text-center;
   }
 
-  @apply absolute border border-gray-700 bg-gray-800 rounded-layout w-full z-10;
+  @apply absolute border border-gray-700 bg-gray-800 rounded-layout w-60 z-10;
   top: calc(100% + 15px);
 
   > a {

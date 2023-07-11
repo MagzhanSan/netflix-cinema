@@ -1,4 +1,5 @@
 import styles from './SearchList.module.scss';
+import { getMovieUrl } from '@/config/url.config';
 import { IMovie } from '@/shared/types/movies.types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +11,7 @@ const SearchList: FC<{ movies: IMovie[] }> = ({ movies }) => {
       {movies.length ? (
         movies.map((movie) => {
           return (
-            <Link key={movie._id} href={movie.videoUrl}>
+            <Link key={movie._id} href={getMovieUrl(movie.slug)} legacyBehavior>
               <a>
                 <Image
                   src={movie.poster}
