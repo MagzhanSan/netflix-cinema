@@ -1,0 +1,7 @@
+.seeMore {
+  @apply mx-layout text-center bg-red-600 py-2;
+  border-radius: 10px;
+}
+.movieItem {
+  @apply mx-layout bg-slate-900 p-3 flex justify-between;
+}
