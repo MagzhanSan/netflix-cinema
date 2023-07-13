@@ -1,7 +1,6 @@
 'use client';
 
 import './globals.scss';
-import { BrowserRouter, Link, Routes } from 'react-router-dom';
 
 export const metadata = {
   title: 'Online cinema by Maga | Site for watching movies',
