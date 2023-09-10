@@ -1,16 +1,16 @@
 import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
 import AuthItems from './auth/AuthItems';
-import { IMenu } from './menuContainer.interface';
+import { IMenu } from './menu.interface';
 import { FC } from 'react';
 
 const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
   return (
-    <div className={styles.menu}>
-      <div className={styles.heading}>{title}</div>
-      <ul className={styles.ul}>
+    <div>
+      <div className={styles.heading}>Genres</div>
+      <ul className={styles.list}>
         {items.map((item) => (
-          <MenuItem item={item} key={item.link} />
+          <MenuItem key={item.link} item={item} />
         ))}
         {title === 'General' ? <AuthItems /> : null}
       </ul>

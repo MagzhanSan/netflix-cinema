@@ -1,12 +1,12 @@
 'use client';
 
+import Layout from './components/layout/Layout';
 import Home from './components/screens/home/Home';
-import { MainProvider } from 'providers/MainProvider';
 
 export default function page() {
   return (
-    <MainProvider>
+    <Layout>
       <Home />
-    </MainProvider>
+    </Layout>
   );
 }

@@ -1,5 +1,5 @@
 .menu {
-  @apply my-14;
+  @apply mb-14 animate-fade;
   .heading {
     @apply text-gray-500 uppercase text-sm font-semibold pl-layout;
   }
@@ -24,6 +24,7 @@
           @apply transition-colors;
         }
       }
+
       &.active {
         @apply border-r-primary;
 

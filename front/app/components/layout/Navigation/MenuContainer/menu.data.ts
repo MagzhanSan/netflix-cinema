@@ -1,27 +1,27 @@
-import { IMenu } from './menuContainer.interface';
+import { IMenu } from './menu.interface';
 
 export const firstMenu: IMenu = {
-  title: 'Home',
+  title: 'Menu',
   items: [
     {
-      title: 'Home',
-      link: '/',
       icon: 'MdHome',
+      link: '/',
+      title: 'Home',
     },
     {
-      title: 'Discovery',
-      link: '/genres',
       icon: 'MdExplore',
+      link: '/genres',
+      title: 'Discovery',
     },
     {
-      title: 'Fresh Movies',
-      link: '/fresh',
       icon: 'MdRefresh',
+      link: '/fresh',
+      title: 'Fresh movies',
     },
     {
-      title: 'Trending now',
-      link: '/trending',
       icon: 'MdLocalFireDepartment',
+      link: '/trending',
+      title: 'Trending now',
     },
   ],
 };
